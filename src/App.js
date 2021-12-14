@@ -3,7 +3,7 @@ import './App.css';
 import React, { useState } from 'react';
 import Form from './Form';
 import Card from './Card';
-import { Link } from 'react-router-dom';
+
 
 function App() {
   const [ player, setPlayer ] = useState([
@@ -21,17 +21,17 @@ function App() {
 
   return (
     <div className="App">
-      <Link to="/">Home</Link>
-      <Link to="/apply">Apply</Link>
-      {/* <Form
-            submitPlayer={addPlayer}
-            buttonText='Apply!' /> */}
+      <div>
       { player.map(player => {
           return (
             <Card key={player.id} details={player} />
           )
       })
     }
+      <Form
+        submitPlayer={addPlayer}
+        buttonText='Apply!' />
+        </div>
     </div>
   );
 };
