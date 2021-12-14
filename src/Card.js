@@ -28,7 +28,7 @@ export default function Player(props) {
     return (
       <StyledDiv className='player container'>
         <StyledH2>{details.name}</StyledH2>
-        <StyledP>{details.class} ({details.ilvl})</StyledP>
+        <StyledP>{details.class} | ({details.ilvl})</StyledP>
         <StyledP> Level - {details.level}</StyledP>
       </StyledDiv>
     )
